@@ -1,7 +1,9 @@
 import React, { useContext } from 'react'
 import UserContext from '../context/Usercontext';
+import CardContext from "../context/CardContext"
 function Products({name,description , img , price}) {
   const {isLoged}  = useContext(UserContext)
+  const {addCard} = useContext(CardContext)
   console.log();
     const addItems  = ()=>{
       
