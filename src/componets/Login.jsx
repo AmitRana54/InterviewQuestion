@@ -17,7 +17,7 @@ const Login = () => {
     };
   
     const handleSubmit = (e) => {
-      e.preventDefault();
+      e?.preventDefault();
       setResult(true)
         const check = checkUser(email,password)
         setResult(check)
@@ -46,8 +46,8 @@ const Login = () => {
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" value={password} onChange={handlePasswordChange} />
         </div>
-        <button type="submit">Login</button>
-        <Link   to="/signup"     >    <button     class="signup-button">Sign Up</button>          </Link>
+        <button onClick={handleSubmit}>   <Link>  Login </Link>      </button>
+        <Link   to="/signup"     >    <button     className="signup-button">Sign Up</button>          </Link>
         {!result && <h1 className="error-message">bsdk sahi data daal tu pls</h1>}
       </form>
     </div>

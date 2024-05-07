@@ -5,7 +5,9 @@ import UserContext from '../context/Usercontext';
 function Items() {
     const [products, setProducts] = useState([]);
   const data =useContext(UserContext)
+  
   console.log(data.isLoged,"dekh")
+  console.log(" render items")
 
 
     useEffect(() => {
@@ -31,6 +33,7 @@ function Items() {
                 products.length > 0 && products.map((item) => (
                     <Products
                         key={item.id}
+                        id={item.id}
                         img={item.image}
                         description={item.description}
                         name={item.title}

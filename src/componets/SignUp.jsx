@@ -1,5 +1,6 @@
 import React,{useContext, useState} from "react";
 import UserContext from "../context/Usercontext";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const {addUser ,isLoged} = useContext(UserContext)
@@ -15,7 +16,7 @@ const Signup = () => {
     };
   
     const handleSubmit = (e) => {
-      e.preventDefault();
+      e?.preventDefault();
       const issignup = addUser(email,password)
       if (issignup) {
         console.log("Signing up with:", email, password);
@@ -39,7 +40,7 @@ const Signup = () => {
             <label htmlFor="password">Password:</label>
             <input type="password" id="password" value={password} onChange={handlePasswordChange} />
           </div>
-          <button type="submit">Sign Up</button>
+          <button onClick={handleSubmit}><Link to= "/items"> Sign Up </Link></button>
         </form>
       </div>
     );

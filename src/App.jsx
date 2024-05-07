@@ -11,7 +11,6 @@ function App() {
     <CardContextProvider>
     <Header/>
    <Outlet/>
-   <Items></Items>
 
     
     </CardContextProvider>

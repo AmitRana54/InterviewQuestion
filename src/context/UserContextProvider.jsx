@@ -6,8 +6,8 @@ const UserContextProvider = ({children}) => {
 
     const addUser = (email, password) => {
         localStorage.setItem("email", JSON.stringify({email: email, password: password}));
-        console.log("user signup");
         setIsLoged(true);
+        console.log("user signup");
         return true;
     };
 

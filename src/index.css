@@ -178,3 +178,32 @@ input[type="password"] {
 .signup-button:hover {
   background-color: #218838; /* Darker green color on hover */
 }
+.addCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.cardItem {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+}
+
+.cardItem h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cardItem img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cardItem h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
